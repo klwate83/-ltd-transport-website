@@ -1,0 +1,603 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    color:#222;
+    background:#fff;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background:white;
+}
+
+.logo-container img{
+    height:75px;
+    object-fit:contain;
+}
+
+nav ul{
+    display:flex;
+    gap:35px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:#222;
+    font-weight:700;
+}
+
+.cta-button,
+.hero-button,
+.quote-button{
+    background:#f04d0f;
+    color:white;
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:10px;
+    font-weight:bold;
+    display:inline-block;
+}
+
+.hero{
+    min-height:85vh;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.62), rgba(255,255,255,0.62)),
+        url("assets/images/hero/Hero - Transport_Fleet.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:60px 20px;
+}
+
+.hero-overlay{
+    text-align:center;
+    max-width:950px;
+}
+
+.hero h1{
+    font-size:5rem;
+    line-height:1.15;
+    color:#2f2f2f;
+    margin-bottom:30px;
+}
+
+.hero p{
+    font-size:2rem;
+    line-height:1.3;
+    margin-bottom:40px;
+}
+
+.partners-section{
+    padding:55px 0;
+    background:#fff;
+    overflow:hidden;
+    text-align:center;
+}
+
+.partners-label{
+    font-size:0.85rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#777;
+    margin-bottom:30px;
+    font-weight:700;
+}
+
+.partners-marquee{
+    width:100%;
+    overflow:hidden;
+}
+
+.partners-track{
+    display:flex;
+    align-items:center;
+    gap:85px;
+    width:max-content;
+    animation:scrollPartners 35s linear infinite;
+}
+
+.partners-track img{
+    height:75px;
+    width:auto;
+    max-width:190px;
+    object-fit:contain;
+    filter:grayscale(100%);
+    opacity:0.75;
+    transition:all 0.3s ease;
+}
+
+.partners-track img:hover{
+    filter:grayscale(0%);
+    opacity:1;
+    transform:scale(1.06);
+}
+
+@keyframes scrollPartners{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-50%);
+    }
+}
+
+.services{
+    padding:90px 40px;
+    background:#fff;
+}
+
+.services h2{
+    text-align:center;
+    font-size:2.5rem;
+    margin-bottom:45px;
+}
+
+.slider{
+    position:relative;
+    max-width:850px;
+    height:850px;
+    margin:0 auto;
+    overflow:hidden;
+    border-radius:18px;
+    box-shadow:0 12px 35px rgba(0,0,0,.18);
+    background:#f5f5f5;
+}
+
+.slide{
+    position:absolute;
+    inset:0;
+    opacity:0;
+    transition:opacity 1s ease-in-out;
+}
+
+.slide.active{
+    opacity:1;
+    z-index:2;
+}
+
+.slide img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    object-position:center;
+    display:block;
+}
+
+.slide::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top, rgba(0,0,0,.65), rgba(0,0,0,.05));
+}
+
+.slide-content{
+    position:absolute;
+    left:40px;
+    bottom:40px;
+    max-width:620px;
+    color:white;
+    z-index:3;
+}
+
+.slide-content h3{
+    font-size:2.4rem;
+    margin-bottom:10px;
+}
+
+.slide-content p{
+    font-size:1.1rem;
+    line-height:1.5;
+}
+
+.quote-section{
+    text-align:center;
+    padding:100px 30px;
+    background:#f5f5f5;
+}
+
+.quote-section h2{
+    font-size:2.5rem;
+    margin-bottom:20px;
+}
+
+.quote-section p{
+    font-size:1.2rem;
+    margin-bottom:30px;
+}
+
+.footer{
+    display:grid;
+    grid-template-columns:160px 1fr 230px 260px 300px;
+    gap:35px;
+    align-items:start;
+    padding:50px 60px;
+    background:#f5f5f5;
+    color:#333;
+}
+
+.logo-column img{
+    width:120px;
+    height:auto;
+}
+
+.footer-column h2{
+    font-size:2rem;
+    font-weight:400;
+}
+
+.footer-column h4{
+    font-size:0.9rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#666;
+    margin-bottom:15px;
+}
+.form-button{
+    border:none;
+    cursor:pointer;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.footer-column p{
+    margin-bottom:8px;
+    line-height:1.5;
+}
+
+.footer-column a{
+    color:#333;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.footer-column a:hover{
+    color:#f04d0f;
+}
+
+@media(max-width:900px){
+    .navbar{
+        padding:18px 25px;
+        flex-wrap:wrap;
+        gap:20px;
+        justify-content:center;
+        text-align:center;
+    }
+
+    nav ul{
+        gap:18px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:3.2rem;
+    }
+
+    .hero p{
+        font-size:1.4rem;
+    }
+
+    .slider{
+        max-width:90vw;
+        height:90vw;
+    }
+
+    .footer{
+        grid-template-columns:1fr;
+        text-align:center;
+        gap:30px;
+    }
+
+    .logo-column img{
+        margin:auto;
+    }
+}
+
+@media(max-width:600px){
+    .hero h1{
+        font-size:2.4rem;
+    }
+
+    .hero p{
+        font-size:1.1rem;
+    }
+
+    .partners-track{
+        gap:45px;
+        animation-duration:24s;
+    }
+
+    .partners-track img{
+        height:55px;
+        max-width:150px;
+    }
+
+    .slide-content{
+        left:22px;
+        right:22px;
+        bottom:25px;
+    }
+
+    .slide-content h3{
+        font-size:1.7rem;
+    }
+
+    .slide-content p{
+        font-size:0.95rem;
+    }
+}
+
+.about-page-hero{
+    min-height:75vh;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.60), rgba(255,255,255,0.60)),
+        url("assets/images/hero/About background image.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:70px 25px;
+}
+
+.about-page-hero-content{
+    max-width:900px;
+}
+
+.about-page-hero h1{
+    font-size:5rem;
+    line-height:1.1;
+    color:#2f2f2f;
+    margin-bottom:25px;
+}
+
+.about-page-hero p{
+    font-size:1.7rem;
+    line-height:1.4;
+    margin-bottom:35px;
+}
+
+.section-kicker{
+    font-size:0.85rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#f04d0f;
+    font-weight:800;
+    margin-bottom:16px;
+}
+
+.about-intro-section{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:55px;
+    align-items:center;
+    max-width:1200px;
+    margin:auto;
+    padding:95px 60px;
+}
+
+.about-intro-text h2,
+.values-content h2,
+.team-section h2,
+.fleet-carousel-section h2,
+.about-contact-copy h2{
+    font-size:2.7rem;
+    line-height:1.2;
+    margin-bottom:22px;
+    color:#222;
+}
+
+.about-intro-text p,
+.values-content p,
+.about-contact-copy p{
+    font-size:1.1rem;
+    line-height:1.7;
+    margin-bottom:18px;
+}
+
+.about-intro-image img,
+.values-image img{
+    width:100%;
+    border-radius:18px;
+    box-shadow:0 12px 35px rgba(0,0,0,.16);
+}
+
+.values-section{
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    gap:55px;
+    align-items:center;
+    padding:95px 60px;
+    background:#f7f7f7;
+}
+
+.value-card{
+    background:#fff;
+    padding:24px;
+    border-radius:16px;
+    margin-bottom:18px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    border-left:5px solid #f04d0f;
+}
+
+.value-card h3{
+    margin-bottom:8px;
+    font-size:1.35rem;
+}
+
+.team-section{
+    padding:95px 60px;
+    text-align:center;
+    background:#fff;
+}
+
+.team-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:30px;
+    max-width:1100px;
+    margin:45px auto 0;
+}
+
+.team-card{
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 12px 30px rgba(0,0,0,.14);
+    background:#fff;
+}
+
+.team-card img{
+    width:100%;
+    height:360px;
+    object-fit:cover;
+    object-position:center;
+    display:block;
+}
+
+.team-card h3{
+    font-size:1.35rem;
+    margin:22px 20px 8px;
+}
+
+.team-card p{
+    margin:0 20px 24px;
+    color:#666;
+    font-weight:700;
+}
+
+.fleet-carousel-section{
+    padding:95px 40px;
+    text-align:center;
+    background:#111;
+    color:white;
+}
+
+.fleet-carousel-section h2{
+    color:white;
+}
+
+.fleet-carousel{
+    position:relative;
+    max-width:1000px;
+    height:620px;
+    margin:45px auto 0;
+    overflow:hidden;
+    border-radius:22px;
+    box-shadow:0 16px 40px rgba(0,0,0,.35);
+    background:#222;
+}
+
+.fleet-slide{
+    position:absolute;
+    inset:0;
+    opacity:0;
+    transition:opacity 1s ease-in-out;
+}
+
+.fleet-slide.active{
+    opacity:1;
+    z-index:2;
+}
+
+.fleet-slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+    display:block;
+}
+
+.about-contact-section{
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    gap:50px;
+    align-items:center;
+    padding:95px 60px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.contact-form{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:17px 18px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:1rem;
+}
+
+.contact-form textarea{
+    resize:vertical;
+}
+
+.contact-form .quote-button{
+    text-align:center;
+    border:none;
+}
+
+@media(max-width:900px){
+    .about-page-hero h1{
+        font-size:3.2rem;
+    }
+
+    .about-page-hero p{
+        font-size:1.25rem;
+    }
+
+    .about-intro-section,
+    .values-section,
+    .about-contact-section{
+        grid-template-columns:1fr;
+        padding:70px 30px;
+    }
+
+    .team-grid{
+        grid-template-columns:1fr;
+    }
+
+    .fleet-carousel{
+        height:60vw;
+    }
+}
+
+@media(max-width:600px){
+    .about-page-hero h1{
+        font-size:2.4rem;
+    }
+
+    .about-intro-text h2,
+    .values-content h2,
+    .team-section h2,
+    .fleet-carousel-section h2,
+    .about-contact-copy h2{
+        font-size:2rem;
+    }
+
+    .team-card img{
+        height:300px;
+    }
+
+    .fleet-carousel{
+        height:75vw;
+    }
+}
