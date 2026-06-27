@@ -233,17 +233,24 @@ nav a{
 }
 
 .footer-column h2{
-    font-size:2rem;
+    font-size:0.95rem;
     font-weight:400;
 }
 
 .footer-column h4{
-    font-size:0.9rem;
+    font-size:0.75rem;
     letter-spacing:2px;
     text-transform:uppercase;
     color:#666;
     margin-bottom:15px;
 }
+
+.footer-column p,
+.footer-column a {
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+
 .form-button{
     border:none;
     cursor:pointer;
@@ -600,4 +607,34 @@ nav a{
     .fleet-carousel{
         height:75vw;
     }
+}
+.footer-bottom {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 25px;
+    border-top: 1px solid #d9d9d9;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    grid-column: 1 / -1;
+    flex-basis: 100%;
+}
+
+.footer-bottom p {
+    font-size: 0.8rem;
+    color: #666;
+    margin: 0;
+}
+
+.footer-bottom a {
+    color: #f04d0f;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
 }
